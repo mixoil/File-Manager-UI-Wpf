@@ -1,0 +1,34 @@
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\bin\Debug\FileManagerUI.exe.config
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\bin\Debug\FileManagerUI.exe
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\bin\Debug\FileManagerUI.pdb
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\bin\Debug\Microsoft.Expression.Drawing.dll
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\FileManagerUI.csproj.AssemblyReference.cache
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\FileManagerUI.csproj.SuggestedBindingRedirects.cache
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\Custom Controls\ActivityCard.g.cs
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\Custom Controls\CardButtons.g.cs
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\Custom Controls\CircularProgressBar.g.cs
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\Custom Controls\FileListControl.g.cs
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\Custom Controls\ImageButtons.g.cs
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\MainWindow.g.cs
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\Custom Controls\mediumSizeButtons.g.cs
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\Custom Controls\proCard.g.cs
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\App.g.cs
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\FileManagerUI_MarkupCompile.cache
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\FileManagerUI_MarkupCompile.lref
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\App.baml
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\Custom Controls\ActivityCard.baml
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\Custom Controls\CardButtons.baml
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\Custom Controls\CircularProgressBar.baml
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\Custom Controls\FileListControl.baml
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\Custom Controls\ImageButtons.baml
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\MainWindow.baml
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\Custom Controls\mediumSizeButtons.baml
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\Custom Controls\proCard.baml
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\FileManagerUI.g.resources
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\FileManagerUI.Properties.Resources.resources
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\FileManagerUI.csproj.GenerateResource.cache
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\FileManagerUI.csproj.CoreCompileInputs.cache
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\FileManagerUI.csproj.CopyComplete
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\FileManagerUI.exe
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\FileManagerUI.pdb

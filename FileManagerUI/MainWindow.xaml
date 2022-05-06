@@ -457,31 +457,7 @@
                                                 <RowDefinition Height="*"/>
                                             </Grid.RowDefinitions>
                                             <!--#region Card Buttons-->
-                                            <UniformGrid Columns="3" HorizontalAlignment="Stretch" Margin="0,10,15,8">
-                                                <ccontrols:CardButtons Margin="15,0,0,0" text1="Dropbox" text2="67 Gb / 128 Gb" imageSource="/assets/dropbox.png" Progress="56" 
-                                                                       IconBackground="#F0F5F8" IconBackgroundMouseOver="White" ProgressBarThickness="4" ProgressBackgroundBrush="#F0F5F8" ProgressBackgroundBrushMouseOver="#2B88C9" ProgressIndicatorBrush="#58B0ED" ProgressIndicatorBrushMouseOver="White"
-                                                                       ProgressTextColor="DarkSlateGray" ProgressTextWeight="Bold" ProgressTextColorMouseOver="White" ProgressTextWeightMouseOver="Bold"/>
-
-                                                <ccontrols:CardButtons Margin="15,0,0,0" text1="Google Drive" text2="83 Gb / 512 Gb" imageSource="/assets/googledrive.png" Progress="11" IconBackground="#F0F5F8" IconBackgroundMouseOver="White" ProgressBarThickness="4" ProgressBackgroundBrush="#F0F5F8" ProgressBackgroundBrushMouseOver="#2B88C9" ProgressIndicatorBrush="#58B0ED" ProgressIndicatorBrushMouseOver="White"
-                                                                       ProgressTextColor="DarkSlateGray" ProgressTextWeight="Bold" ProgressTextColorMouseOver="White" ProgressTextWeightMouseOver="Bold"/>
-
-                                                <ccontrols:CardButtons Margin="15,0,0,0" text1="OneDrive" text2="124 Gb / 256 Gb" imageSource="/assets/onedrive.png" Progress="62" IconBackground="#F0F5F8" IconBackgroundMouseOver="White" ProgressBarThickness="4" ProgressBackgroundBrush="#F0F5F8" ProgressBackgroundBrushMouseOver="#2B88C9" ProgressIndicatorBrush="#58B0ED" ProgressIndicatorBrushMouseOver="White"
-                                                                       ProgressTextColor="DarkSlateGray" ProgressTextWeight="Bold" ProgressTextColorMouseOver="White" ProgressTextWeightMouseOver="Bold"/>
-                                            </UniformGrid>
-                                            <!--#endregion-->
-
-                                            <!--#region  Quick Access-->
-                                            <TextBlock Grid.Row="1" Text="Quick Access" FontWeight="Bold" Foreground="DarkSlateGray" Margin="15,30,0,0" FontSize="25"/>
-                                            <UniformGrid Columns="8" Grid.Row="2" Margin="0,30,0,30">
-                                                <ccontrols:ImageButtons ImageSource="/assets/image.png" ButtonText="Images"/>
-                                                <ccontrols:ImageButtons ImageSource="/assets/video.png" ButtonText="Videos"/>
-                                                <ccontrols:ImageButtons ImageSource="/assets/music.png" ButtonText="Music"/>
-                                                <ccontrols:ImageButtons ImageSource="/assets/apps.png" ButtonText="Apps"/>
-                                                <ccontrols:ImageButtons ImageSource="/assets/zip.png" ButtonText="Zip Files"/>
-                                                <ccontrols:ImageButtons ImageSource="/assets/document.png" ButtonText="Documents"/>
-                                                <ccontrols:ImageButtons ImageSource="/assets/downloadsfolder.png" ButtonText="Downloads"/>
-                                                <ccontrols:ImageButtons ImageSource="/assets/plus.png" ButtonText="Add"/>
-                                            </UniformGrid>
+                                            <UniformGrid Columns="3" HorizontalAlignment="Stretch" Margin="0,10,15,8"/>
                                             <!--#endregion-->
 
                                             <!--#region My Files Section-->
