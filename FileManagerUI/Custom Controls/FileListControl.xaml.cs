@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows;
@@ -20,6 +21,7 @@ namespace FileManagerUI.Custom_Controls
     public partial class FileListControl : UserControl
     {
         public readonly Brush TextColor = Brushes.LightSlateGray;
+
         public FileListControl()
         {
             InitializeComponent();
@@ -34,23 +36,45 @@ namespace FileManagerUI.Custom_Controls
             if (result == System.Windows.Forms.DialogResult.OK)
             {
                 string folderName = folderBrowserDialog1.SelectedPath;
+                ButtonsPanel.Children.Clear();
+                ButtonsPanel.Children.Add(new TextBox { Text = "Loading", Margin = new Thickness(5, 0, 0, 0), Width = 50 });
+                var folderTree = GetFolderTree(folderName);
+                ButtonsPanel.Children.Clear();
+                AddFoldersPanel(folderTree);
                 //Do your work here!
             }
 
-            UpdateFoldersPanel();
+            
         }
 
-        private void UpdateFoldersPanel()
+        public FolderInfo GetFolderTree(string rootFolderPath)
         {
-            ButtonsPanel.Children.Clear();
-            for(var i = 0; i < 100; i++)
+            var directory = new DirectoryInfo(rootFolderPath);
+            var result = new FolderInfo(directory.FullName, directory.Name, directory.LastWriteTime);
+            DirectoryInfo[] directories = null;
+            try
             {
-                var btn = GetFolderButton(new FolderInfo($"Folder {i}", i + 10, DateTimeOffset.Now - TimeSpan.FromDays(i), (ulong)(10 * i)));
+                directories = directory.GetDirectories();
+            }
+            catch
+            {
+                return result;
+            }
+            foreach(var dir in directories)
+                result.InnerFolders.Add(GetFolderTree(dir.FullName));
+            return result;
+        }
+
+        private void AddFoldersPanel(FolderInfo rootFolder)
+        {
+            foreach(var folder in rootFolder.InnerFolders)
+            {
+                var btn = GetFolderButton(new FolderInfoViewModel(folder.Name, 0, folder.LastModified, 0));
                 ButtonsPanel.Children.Add(btn);
             }
         }
 
-        private Button GetFolderButton(FolderInfo folderInfo)
+        private Button GetFolderButton(FolderInfoViewModel folderInfo)
         {
             var grid = new Grid();
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
@@ -114,19 +138,34 @@ namespace FileManagerUI.Custom_Controls
         }
     }
 
-    public class FolderInfo
+    public class FolderInfoViewModel
     {
         public string Name { get; set; }
         public int ItemsCount { get; set; }
         public DateTimeOffset LastModified { get; set; }
         public ulong FolderSize { get; set; }
 
-        public FolderInfo(string name, int count, DateTimeOffset lastModified, ulong folderSize)
+        public FolderInfoViewModel(string name, int count, DateTimeOffset lastModified, ulong folderSize)
         {
             Name = name;
             ItemsCount = count;
             LastModified = lastModified;
             FolderSize = folderSize;
+        }
+    }
+
+    public class FolderInfo
+    {
+        public string Path { get; set; }
+        public string Name { get; set; }
+        public DateTimeOffset LastModified { get; set; }
+        public List<FolderInfo> InnerFolders;
+        public FolderInfo(string path, string name, DateTimeOffset lastModified)
+        {
+            this.Path = path;
+            this.Name = name;
+            this.LastModified = lastModified;
+            InnerFolders = new List<FolderInfo>();
         }
     }
 }

@@ -2,7 +2,6 @@ D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\bin\Debug\FileManagerUI.exe
 D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\bin\Debug\FileManagerUI.exe
 D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\bin\Debug\FileManagerUI.pdb
 D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\bin\Debug\Microsoft.Expression.Drawing.dll
-D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\FileManagerUI.csproj.AssemblyReference.cache
 D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\FileManagerUI.csproj.SuggestedBindingRedirects.cache
 D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\Custom Controls\ActivityCard.g.cs
 D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\Custom Controls\CardButtons.g.cs
