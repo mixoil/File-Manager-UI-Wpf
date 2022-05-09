@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "78c74263-87c6-49dc-9281-986bae384254": {
+      "ProjectGuid": "78c74263-87c6-49dc-9281-986bae384254",
+      "DisplayName": "FileManagerUI",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

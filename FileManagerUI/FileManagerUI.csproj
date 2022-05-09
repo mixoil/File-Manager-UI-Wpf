@@ -75,6 +75,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Custom Controls\Folder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Custom Controls\ImageButtons.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -98,6 +102,9 @@
     </Compile>
     <Compile Include="Custom Controls\FileListControl.xaml.cs">
       <DependentUpon>FileListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\Folder.xaml.cs">
+      <DependentUpon>Folder.xaml</DependentUpon>
     </Compile>
     <Compile Include="Custom Controls\ImageButtons.xaml.cs">
       <DependentUpon>ImageButtons.xaml</DependentUpon>

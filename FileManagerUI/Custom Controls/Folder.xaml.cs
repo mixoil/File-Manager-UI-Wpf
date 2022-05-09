@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -12,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FileManagerUI
+namespace FileManagerUI.Custom_Controls
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для Folder.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Folder : UserControl
     {
-        public MainWindow()
+        public Folder()
         {
             InitializeComponent();
-        }
-
-        private void Review_Click(object sender, RoutedEventArgs e)
-        {
-            FoldersListControl.OpenFolder();
         }
     }
 }

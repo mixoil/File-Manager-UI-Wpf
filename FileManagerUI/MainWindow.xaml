@@ -463,9 +463,10 @@
                                             <!--#region My Files Section-->
                                             <Grid Grid.Row="3">
                                                 <TextBlock Text="My Files" FontWeight="Bold" Foreground="DarkSlateGray" VerticalAlignment="Center" Margin="15,30,0,0" FontSize="25"/>
+                                                <Button x:Name="Review" Margin="131,32,596,1" Content="Обзор" FontSize="16" Click="Review_Click"/>
                                                 <TextBlock Text="See all" FontWeight="SemiBold" HorizontalAlignment="Right" VerticalAlignment="Center" TextAlignment="Right" Foreground="#FF37A0EA" Margin="0,30,15,0" FontSize="20"/>
                                             </Grid>
-                                            <ccontrols:FileListControl Grid.Row="4" Margin="15" />
+                                            <ccontrols:FileListControl x:Name="FoldersListControl" Grid.Row="4" Margin="15" />
                                             <!--#endregion-->
                                         </Grid>
 

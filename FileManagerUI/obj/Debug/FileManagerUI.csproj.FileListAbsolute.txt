@@ -32,3 +32,5 @@ D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\FileManagerUI.csp
 D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\FileManagerUI.csproj.CopyComplete
 D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\FileManagerUI.exe
 D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\FileManagerUI.pdb
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\Custom Controls\Folder.g.cs
+D:\Misha\Coding\C#\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\Custom Controls\Folder.baml

@@ -88,7 +88,7 @@
                     <Separator Grid.ColumnSpan="5" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" BorderThickness="1" BorderBrush="#F0F5F8"/>
                 </Grid>
                 <ScrollViewer Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Focusable="False">
-                    <StackPanel Orientation="Vertical">
+                    <StackPanel x:Name="ButtonsPanel"  Orientation="Vertical">
                         <Button Style="{DynamicResource ButtonStyle1}">
                             <Button.Content>
                                 <Grid>
