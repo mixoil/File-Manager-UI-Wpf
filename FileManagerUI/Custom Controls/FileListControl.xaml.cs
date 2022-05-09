@@ -27,6 +27,21 @@ namespace FileManagerUI.Custom_Controls
 
         public void OpenFolder()
         {
+            var folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+
+            // Show the FolderBrowserDialog.
+            System.Windows.Forms.DialogResult result = folderBrowserDialog1.ShowDialog();
+            if (result == System.Windows.Forms.DialogResult.OK)
+            {
+                string folderName = folderBrowserDialog1.SelectedPath;
+                //Do your work here!
+            }
+
+            UpdateFoldersPanel();
+        }
+
+        private void UpdateFoldersPanel()
+        {
             ButtonsPanel.Children.Clear();
             for(var i = 0; i < 100; i++)
             {
