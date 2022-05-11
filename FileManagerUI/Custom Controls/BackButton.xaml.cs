@@ -21,9 +21,9 @@ namespace FileManagerUI.Custom_Controls
     public partial class BackButton : UserControl
     {
         public FolderInfo ParentInfo { get; set; }
-        public Action<FolderInfo> UpdateFolders { get; set; }
+        public Action<string> UpdateFolders { get; set; }
 
-        public BackButton(FolderInfo parentInfo, Action<FolderInfo> updateFolders)
+        public BackButton(FolderInfo parentInfo, Action<string> updateFolders)
         {
             InitializeComponent();
             ParentInfo = parentInfo;
@@ -35,7 +35,7 @@ namespace FileManagerUI.Custom_Controls
         {
             if (ParentInfo == null)
                 throw new InvalidOperationException();
-            UpdateFolders.Invoke(ParentInfo);
+            UpdateFolders.Invoke(ParentInfo.Path);
         }
     }
 }

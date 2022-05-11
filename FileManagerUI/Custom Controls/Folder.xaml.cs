@@ -25,9 +25,9 @@ namespace FileManagerUI.Custom_Controls
         public string LastModified { get; set; }
         public string FolderSize { get; set; }
         public FolderInfo FolderInfo { get; set; }
-        public Action<FolderInfo> UpdateFolders { get; set; }
+        public Action<string> UpdateFolders { get; set; }
 
-        public Folder(FolderInfo folderInfo, Action<FolderInfo> updateFolders)
+        public Folder(FolderInfo folderInfo, Action<string> updateFolders)
         {
             InitializeComponent();
             FolderName = folderInfo.Name;
@@ -43,7 +43,7 @@ namespace FileManagerUI.Custom_Controls
 
         public void SwitchToFolder(object sender, RoutedEventArgs e)
         {
-            UpdateFolders.Invoke(FolderInfo);
+            UpdateFolders.Invoke(FolderInfo.Path);
         }
     }
 }

@@ -21,6 +21,7 @@ namespace FileManagerUI.Custom_Controls
     public partial class FileListControl : UserControl
     {
         public readonly Brush TextColor = Brushes.LightSlateGray;
+        private string RootPath { get; set; }
 
         public FileListControl()
         {
@@ -35,21 +36,45 @@ namespace FileManagerUI.Custom_Controls
             System.Windows.Forms.DialogResult result = folderBrowserDialog1.ShowDialog();
             if (result == System.Windows.Forms.DialogResult.OK)
             {
-                string folderName = folderBrowserDialog1.SelectedPath;
-                var folderTree = GetFolderTree(folderName);
-                UpdateFolders(folderTree);
+                RootPath = folderBrowserDialog1.SelectedPath;
+                //var folderTree = GetFolderTree(RootPath);
+                UpdateFolders(RootPath);
                 //AddFoldersPanel(folderTree);
                 //Do your work here!
             }            
         }
 
-        public void UpdateFolders(FolderInfo folder)
+        public void UpdateFolders(string path)
         {
+            var folder = GetFolderByPath(path);
             ButtonsPanel.Children.Clear();
             if (folder.ParentFolder != null)
                 ButtonsPanel.Children.Add(new BackButton(folder.ParentFolder, UpdateFolders));
             foreach(var fldr in folder.InnerFolders)
                 ButtonsPanel.Children.Add(new Folder(fldr, UpdateFolders));
+        }
+
+        private FolderInfo GetFolderByPath(string path)
+        {
+            var directory = new DirectoryInfo(path);
+            var result = new FolderInfo(directory.FullName, directory.Name, directory.LastWriteTime);
+            DirectoryInfo[] directories = null;
+            try
+            {
+                directories = directory.GetDirectories();
+            }
+            catch
+            {
+                return result;
+            }
+            foreach (var dir in directories)
+                result.AddInnerFolder(new FolderInfo(dir.FullName, dir.Name, dir.LastWriteTime));
+            if (path != RootPath)
+            {
+                var parent = directory.Parent;
+                result.ParentFolder = new FolderInfo(parent.FullName, parent.Name, parent.LastWriteTime);
+            }
+            return result;
         }
 
         public FolderInfo GetFolderTree(string rootFolderPath)
