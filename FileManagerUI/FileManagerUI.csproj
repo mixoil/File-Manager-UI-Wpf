@@ -64,6 +64,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Custom Controls\BackButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Custom Controls\CardButtons.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -94,6 +98,9 @@
     </Compile>
     <Compile Include="Custom Controls\ActivityCard.xaml.cs">
       <DependentUpon>ActivityCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\BackButton.xaml.cs">
+      <DependentUpon>BackButton.xaml</DependentUpon>
     </Compile>
     <Compile Include="Custom Controls\CardButtons.xaml.cs">
       <DependentUpon>CardButtons.xaml</DependentUpon>

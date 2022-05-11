@@ -27,7 +27,7 @@ namespace FileManagerUI.Custom_Controls
             InitializeComponent();
         }
 
-        public void OpenFolder()
+        public void BrowseFolder()
         {
             var folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
 
@@ -36,15 +36,20 @@ namespace FileManagerUI.Custom_Controls
             if (result == System.Windows.Forms.DialogResult.OK)
             {
                 string folderName = folderBrowserDialog1.SelectedPath;
-                ButtonsPanel.Children.Clear();
-                ButtonsPanel.Children.Add(new TextBox { Text = "Loading", Margin = new Thickness(5, 0, 0, 0), Width = 50 });
                 var folderTree = GetFolderTree(folderName);
-                ButtonsPanel.Children.Clear();
-                AddFoldersPanel(folderTree);
+                UpdateFolders(folderTree);
+                //AddFoldersPanel(folderTree);
                 //Do your work here!
-            }
+            }            
+        }
 
-            
+        public void UpdateFolders(FolderInfo folder)
+        {
+            ButtonsPanel.Children.Clear();
+            if (folder.ParentFolder != null)
+                ButtonsPanel.Children.Add(new BackButton(folder.ParentFolder, UpdateFolders));
+            foreach(var fldr in folder.InnerFolders)
+                ButtonsPanel.Children.Add(new Folder(fldr, UpdateFolders));
         }
 
         public FolderInfo GetFolderTree(string rootFolderPath)
@@ -61,7 +66,7 @@ namespace FileManagerUI.Custom_Controls
                 return result;
             }
             foreach(var dir in directories)
-                result.InnerFolders.Add(GetFolderTree(dir.FullName));
+                result.AddInnerFolder(GetFolderTree(dir.FullName));
             return result;
         }
 
@@ -159,13 +164,20 @@ namespace FileManagerUI.Custom_Controls
         public string Path { get; set; }
         public string Name { get; set; }
         public DateTimeOffset LastModified { get; set; }
-        public List<FolderInfo> InnerFolders;
+        public FolderInfo ParentFolder { get; set; }
+        public List<FolderInfo> InnerFolders { get; set; }
         public FolderInfo(string path, string name, DateTimeOffset lastModified)
         {
             this.Path = path;
             this.Name = name;
             this.LastModified = lastModified;
             InnerFolders = new List<FolderInfo>();
+        }
+
+        public void AddInnerFolder(FolderInfo folderInfo)
+        {
+            InnerFolders.Add(folderInfo);
+            folderInfo.ParentFolder = this;
         }
     }
 }

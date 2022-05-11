@@ -26,7 +26,7 @@ namespace FileManagerUI
 
         private void Review_Click(object sender, RoutedEventArgs e)
         {
-            FoldersListControl.OpenFolder();
+            FoldersListControl.BrowseFolder();
         }
     }
 }

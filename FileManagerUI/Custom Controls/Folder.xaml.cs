@@ -20,9 +20,30 @@ namespace FileManagerUI.Custom_Controls
     /// </summary>
     public partial class Folder : UserControl
     {
-        public Folder()
+        public string FolderName { get; set; }
+        public string ItemsCount { get; set; }
+        public string LastModified { get; set; }
+        public string FolderSize { get; set; }
+        public FolderInfo FolderInfo { get; set; }
+        public Action<FolderInfo> UpdateFolders { get; set; }
+
+        public Folder(FolderInfo folderInfo, Action<FolderInfo> updateFolders)
         {
             InitializeComponent();
+            FolderName = folderInfo.Name;
+            ItemsCount = folderInfo.InnerFolders.Count.ToString();
+            LastModified = folderInfo.LastModified.ToString("mm d, yyyy");
+            FolderSize = "1 Gb";
+            FolderInfo = folderInfo;
+            UpdateFolders = updateFolders;
+            FolderButton.Click += SwitchToFolder;
+
+            this.DataContext = this;
+        }
+
+        public void SwitchToFolder(object sender, RoutedEventArgs e)
+        {
+            UpdateFolders.Invoke(FolderInfo);
         }
     }
 }

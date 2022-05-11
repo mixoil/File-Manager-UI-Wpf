@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:FileManagerUI.Custom_Controls"
              mc:Ignorable="d">
     <Grid>
-        <Button Style="{DynamicResource ButtonStyle1}">
+        <Button Style="{DynamicResource ButtonStyle1}" x:Name="FolderButton">
             <Button.Content>
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -17,11 +17,11 @@
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <Image Margin="5,0,0,0" Width="50" Stretch="Uniform" Source="/assets/folder.png" HorizontalAlignment="Left"/>
-                        <TextBlock Margin="5,0,0,0" Text="Collection 1" VerticalAlignment="Center" TextAlignment="Left" HorizontalAlignment="Left" FontWeight="Bold" Foreground="LightSlateGray"/>
+                        <TextBlock Margin="5,0,0,0" Text="{Binding Path=FolderName, Mode=TwoWay}" VerticalAlignment="Center" TextAlignment="Left" HorizontalAlignment="Left" FontWeight="Bold" Foreground="LightSlateGray"/>
                     </StackPanel>
-                    <TextBlock Grid.Column="1" Text="21 Items" VerticalAlignment="Center" TextAlignment="Left" HorizontalAlignment="Left" Foreground="LightSlateGray"/>
-                    <TextBlock Grid.Column="2" Text="Jan 3, 2019" VerticalAlignment="Center" TextAlignment="Left" HorizontalAlignment="Left" Foreground="LightSlateGray"/>
-                    <TextBlock Grid.Column="3" Text="15 Gb" VerticalAlignment="Center" TextAlignment="Left" HorizontalAlignment="Left" Foreground="LightSlateGray"/>
+                    <TextBlock Grid.Column="1" Text="{Binding Path=ItemsCount, Mode=TwoWay}" VerticalAlignment="Center" TextAlignment="Left" HorizontalAlignment="Left" Foreground="LightSlateGray"/>
+                    <TextBlock Grid.Column="2" Text="{Binding Path=LastModified, Mode=TwoWay}" VerticalAlignment="Center" TextAlignment="Left" HorizontalAlignment="Left" Foreground="LightSlateGray"/>
+                    <TextBlock Grid.Column="3" Text="{Binding Path=FolderSize, Mode=TwoWay}" VerticalAlignment="Center" TextAlignment="Left" HorizontalAlignment="Left" Foreground="LightSlateGray"/>
                 </Grid>
             </Button.Content>
         </Button>
