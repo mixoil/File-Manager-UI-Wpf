@@ -33,7 +33,7 @@ namespace FileManagerUI.Custom_Controls
             FolderName = folderInfo.Name;
             ItemsCount = folderInfo.InnerFolders.Count.ToString();
             LastModified = folderInfo.LastModified.ToString("mm d, yyyy");
-            FolderSize = "1 Gb";
+            FolderSize = "2 Gb";
             FolderInfo = folderInfo;
             UpdateFolders = updateFolders;
             FolderButton.Click += SwitchToFolder;
