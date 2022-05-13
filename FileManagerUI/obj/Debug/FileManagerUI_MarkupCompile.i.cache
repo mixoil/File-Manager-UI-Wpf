@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-E:\MISHA\66bit\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\
+D:\Studying\File-Manager-UI-Wpf\FileManagerUI\obj\Debug\
 FileManagerUI
 none
 false
 DEBUG;TRACE
-E:\MISHA\66bit\File-Manager-UI-Wpf\FileManagerUI\App.xaml
+D:\Studying\File-Manager-UI-Wpf\FileManagerUI\App.xaml
 10-993676693
 
 15-2084361900
-14-1558776638
+14-428005109
 Custom Controls\ActivityCard.xaml;Custom Controls\BackButton.xaml;Custom Controls\CardButtons.xaml;Custom Controls\CircularProgressBar.xaml;Custom Controls\FileListControl.xaml;Custom Controls\Folder.xaml;Custom Controls\ImageButtons.xaml;MainWindow.xaml;Custom Controls\mediumSizeButtons.xaml;Custom Controls\proCard.xaml;
 
 True
